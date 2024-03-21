@@ -1,6 +1,6 @@
 ﻿using Zenject;
 
-namespace FishRoom.Initialization
+namespace Game.Initialization
 {
     public class InitializationContext
     {

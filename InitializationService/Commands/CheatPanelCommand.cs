@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.Cheat;
+using Game.Cheat;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class CheatPanelCommand : BaseInitializationCommand
     {

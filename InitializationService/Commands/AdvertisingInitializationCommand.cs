@@ -1,9 +1,9 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.AdvertisingSystem;
+using Game.AdvertisingSystem;
 using GoogleMobileAds.Api;
 using UnityEngine;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class AdvertisingInitializationCommand : BaseInitializationCommand
     {

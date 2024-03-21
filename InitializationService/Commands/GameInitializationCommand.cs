@@ -1,9 +1,9 @@
 using Cysharp.Threading.Tasks;
-using FishRoom.Controllers;
-using FishRoom.Initialization.Game;
-using FishRoom.Util;
+using Game.Controllers;
+using Game.Initialization.Game;
+using Game.Util;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class GameInitializationCommand : BaseInitializationCommand
     {

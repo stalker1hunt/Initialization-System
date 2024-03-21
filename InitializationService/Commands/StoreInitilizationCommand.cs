@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.StoreSystem;
+using Game.StoreSystem;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class StoreInitializationCommand : BaseInitializationCommand
     {

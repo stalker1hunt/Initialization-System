@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 
-namespace FishRoom.Initialization
+namespace Game.Initialization
 {
     public abstract class BaseInitializationCommand : IInitializationCommand
     {

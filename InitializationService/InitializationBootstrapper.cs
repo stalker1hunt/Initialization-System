@@ -4,7 +4,7 @@ using System.Diagnostics;
 using Cysharp.Threading.Tasks;
 using Debug = UnityEngine.Debug;
 
-namespace FishRoom.Initialization
+namespace Game.Initialization
 {
     public class InitializationBootstrapper
     {

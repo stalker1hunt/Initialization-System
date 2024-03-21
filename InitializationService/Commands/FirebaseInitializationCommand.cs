@@ -6,7 +6,7 @@ using Firebase.Analytics;
 using Firebase.Extensions;
 using UnityEngine;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class FirebaseInitializationCommand : BaseInitializationCommand
     {

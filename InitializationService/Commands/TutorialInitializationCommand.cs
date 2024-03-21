@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.TutorialSystem;
+using Game.TutorialSystem;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class TutorialInitializationCommand : BaseInitializationCommand
     {

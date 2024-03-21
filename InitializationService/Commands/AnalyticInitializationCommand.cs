@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.AnalyticSystem;
+using Game.AnalyticSystem;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class AnalyticInitializationCommand: BaseInitializationCommand
     {

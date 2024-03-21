@@ -4,7 +4,7 @@ using Unity.Services.Core;
 using Unity.Services.Core.Environments;
 using UnityEngine;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class UnityServiceInitializationCommand : BaseInitializationCommand
     {

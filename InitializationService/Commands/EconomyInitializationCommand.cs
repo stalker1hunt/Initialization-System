@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.Controllers;
+using Game.Controllers;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class EconomyInitializationCommand : BaseInitializationCommand
     {

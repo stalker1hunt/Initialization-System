@@ -1,9 +1,9 @@
 using CrazyGames;
 using Cysharp.Threading.Tasks;
-using FishRoom.BoosterSystem;
-using FishRoom.Initialization.Commands;
-using FishRoom.Models;
-using FishRoom.Resourses;
+using Game.BoosterSystem;
+using Game.Initialization.Commands;
+using Game.Models;
+using Game.Resourses;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -15,7 +15,7 @@ using Unity.Advertisement.IosSupport;
 using UnityEngine.iOS;
 #endif
 
-namespace FishRoom.Initialization
+namespace Game.Initialization
 {
     public class Initializer : MonoBehaviour
     {

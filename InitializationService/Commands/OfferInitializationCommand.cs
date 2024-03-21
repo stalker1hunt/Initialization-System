@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
-using FishRoom.OfferSystem;
+using Game.OfferSystem;
 
-namespace FishRoom.Initialization.Commands
+namespace Game.Initialization.Commands
 {
     public class OfferInitializationCommand : BaseInitializationCommand
     {
