@@ -58,18 +58,14 @@ namespace FishRoom.Initialization
             _initializationBootstrapper = new InitializationBootstrapper(initializationContext);
 
 #if UNITY_ANDROID && UNITY_IOS
-
             _initializationBootstrapper.AddPreInitializationCommand<UnityServiceInitializationCommand>();
-#endif
-
-#if UNITY_ANDROID && UNITY_IOS
             _initializationBootstrapper.AddPreInitializationCommand<FirebaseInitializationCommand>();
 #endif
             
-             //_initializationBootstrapper.AddPreInitializationCommand<AdvertisingInitializationCommand>();
+            _initializationBootstrapper.AddPreInitializationCommand<AdvertisingInitializationCommand>();
             _initializationBootstrapper.AddPreInitializationCommand<PlayerModelInitializationCommand>();
          
-            //_initializationBootstrapper.AddPreInitializationCommand<CloudSyncInitializationCommand>();
+            _initializationBootstrapper.AddPreInitializationCommand<CloudSyncInitializationCommand>();
             _initializationBootstrapper.AddInitializationCommand<BoosterInitializationCommand>();
 
             _initializationBootstrapper.AddInitializationCommand<EconomyInitializationCommand>();

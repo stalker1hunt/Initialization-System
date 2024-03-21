@@ -3,7 +3,7 @@ using UnityEngine;
 using Zenject;
 
 [CreateAssetMenu(fileName = "ConfigsInstaller", menuName = "Installers/ConfigsInstaller")]
-public class ConfigsInstaller : ScriptableObjectInstaller<ConfigsInstaller> //TODO move to commands
+public class ConfigsInstaller : ScriptableObjectInstaller<ConfigsInstaller>
 {
     [SerializeField] private GameElementsList _gameElementsList;
 

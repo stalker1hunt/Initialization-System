@@ -8,26 +8,26 @@ namespace FishRoom.Initialization
 {
     public class InitializationBootstrapper
     {
-        private readonly List<IInitializationCommand> m_InitializationCommands = new List<IInitializationCommand>();
-        private readonly List<Type> m_InitializationCommandTypes = new List<Type>();
-        private readonly InitializationContext m_InitializationContext;
-        private readonly List<Type> m_PreInitializationCommandTypes = new List<Type>();
+        private readonly List<IInitializationCommand> _initializationCommands = new List<IInitializationCommand>();
+        private readonly List<Type> _initializationCommandTypes = new List<Type>();
+        private readonly InitializationContext _initializationContext;
+        private readonly List<Type> _preInitializationCommandTypes = new List<Type>();
 
         public InitializationBootstrapper(InitializationContext initializationContext)
         {
-            m_InitializationContext = initializationContext;
+            _initializationContext = initializationContext;
         }
 
         public float Progress { get; private set; }
 
         public void AddPreInitializationCommand<T>() where T : BaseInitializationCommand
         {
-            m_PreInitializationCommandTypes.Add(typeof(T));
+            _preInitializationCommandTypes.Add(typeof(T));
         }
 
         public void AddInitializationCommand<T>() where T : BaseInitializationCommand
         {
-            m_InitializationCommandTypes.Add(typeof(T));
+            _initializationCommandTypes.Add(typeof(T));
         }
 
         public async UniTask InitAsync()
@@ -37,22 +37,22 @@ namespace FishRoom.Initialization
             var fullStopwatch = Stopwatch.StartNew();
             var commandStopwatch = new Stopwatch();
 
-            var targetCommandsCount = m_InitializationCommandTypes.Count;
+            var targetCommandsCount = _initializationCommandTypes.Count;
             var finishedCommandsCount = 0;
 
             // Pre create all types, to call constructors
-            foreach (var initializationCommandType in m_InitializationCommandTypes)
+            foreach (var initializationCommandType in _initializationCommandTypes)
             {
                 var command =
-                    (IInitializationCommand) m_InitializationContext.Container.Instantiate(initializationCommandType,
-                        new object[] {m_InitializationContext});
+                    (IInitializationCommand) _initializationContext.Container.Instantiate(initializationCommandType,
+                        new object[] {_initializationContext});
 
-                m_InitializationCommands.Add(command);
+                _initializationCommands.Add(command);
             }
 
             Debug.Log("Started game initialization");
 
-            foreach (var command in m_InitializationCommands)
+            foreach (var command in _initializationCommands)
             {
                 commandStopwatch.Restart();
                 Debug.Log($"Started initialization of '{command.Name}'");
@@ -78,11 +78,11 @@ namespace FishRoom.Initialization
 
         private async UniTask ExecutePreCommandsAsync()
         {
-            foreach (var preInitializationCommandType in m_PreInitializationCommandTypes)
+            foreach (var preInitializationCommandType in _preInitializationCommandTypes)
             {
                 var command =
-                    (IInitializationCommand) m_InitializationContext.Container.Instantiate(preInitializationCommandType,
-                        new object[] {m_InitializationContext});
+                    (IInitializationCommand) _initializationContext.Container.Instantiate(preInitializationCommandType,
+                        new object[] {_initializationContext});
 
                 try
                 {
