@@ -4,6 +4,6 @@ This repository contains 2 services.
 2) This service helps to create a complex sequencing system for animations based on the Dotween plugin.
 
 Dependencies:
-1) [Unitask](https://github.com/Cysharp/UniTask)https://github.com/Cysharp/UniTask
-2) [Zenject](https://github.com/modesttree/Zenject)https://github.com/modesttree/Zenject
-3) [Dotween](https://dotween.demigiant.com/)https://dotween.demigiant.com/
+1) [Unitask](https://github.com/Cysharp/UniTask)
+2) [Zenject](https://github.com/modesttree/Zenject)
+3) [Dotween](https://dotween.demigiant.com/)
